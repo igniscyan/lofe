@@ -1,3 +1,28 @@
+# LOFE - Local's Only Front-End
+
+## What did I stumble upon?
+This repository contains the front end source files for the [Locals Only Sound](localsonlysound.com) official website. They are a Music Group haiing from Toronto signed by Universal Media Group (UMG).
+
+## How was it made?
+
+As the boilerplate `README` junk from below may suggest, the foundations for our react app was created with Facebook's `create-react-app` NPM package (Link below). In addition to this, we have utilized [Skeleton](http://getskeleton.com/) to make the CSS less of a migraine to everyone involved in the project. 
+
+## Contributing
+Find an issue you'd like to work on, and get cracking. We are following [ES6 Standards](http://es6-features.org/), and working very hard to keep everyone on the same page. So if you do anything byzantine, leave a comment that will help everyone else figure out what is going on. 
+
+Commit your code to the appropriate branch, and include a short but descriptive commit message. (Once things are past the skeletal phases, NEVER PUSH TO MASTER UNLESS EXPLICITLY GIVEN PERMISSION).  Master branches should always work no matter how far back in the pipeline you go!
+
+## Timeline
+
+Expect this portion of the document to change often. 
+
+ANTICIPATED FINISH DATE: August 2020
+
+
+### *Boilerplate Below*
+---
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
@@ -37,32 +62,3 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
