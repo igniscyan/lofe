@@ -18,7 +18,7 @@ export class NavBar extends React.Component {
       <div className="container">
         <div className="row">
           <div className="four columns">
-            <a href="foo">
+            <a href="Home">
               <img
                 src={Logo}
                 alt="locals only sound logo"
