@@ -11,16 +11,12 @@ export class PageContent extends React.Component {
     switch (this.props.page) {
       case 'Home':
         return <div>Home</div>;
-        break;
       case 'TourDates':
         return <div>Tour Dates</div>;
-        break;
       case 'Store':
         return <div>Store</div>;
-        break;
       case 'About':
         return <div>About</div>;
-        break;
       default:
         break;
     }

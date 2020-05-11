@@ -14,11 +14,13 @@ export class NavBar extends React.Component {
   }
 
   render() {
+    //Breaking these button elements into a component template might improve modularity, but it works as-is for this application.
     return (
       <div className="container">
         <div className="row">
           <div className="four columns">
-            <a href="Home">
+            {/*The image functions the same as the Home button on click (it's wrapped in an anchor with an empty href, which is currently throwing a warning)*/}
+            <a onClick={this.handleClick} href="">
               <img
                 src={Logo}
                 alt="locals only sound logo"
@@ -28,7 +30,6 @@ export class NavBar extends React.Component {
             </a>
           </div>
           <div className="two columns">
-            {/*Figure out how to get anchor to run onClick script*/}
             <button onClick={this.handleClick} value="Home">
               Home
             </button>
