@@ -3,6 +3,7 @@ import React from 'react';
 import './App.css';
 import { NavBar } from '../NavBar/NavBar';
 import { PageContent } from '../PageContent/PageContent';
+import { Player } from '../Player/Player';
 
 export class App extends React.Component {
   constructor(props) {
@@ -35,6 +36,7 @@ export class App extends React.Component {
       <div>
         <NavBar handleClick={this.updatePageContent} />
         <PageContent page={this.state.page} />
+        <Player / >
       </div>
     );
   }
