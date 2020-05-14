@@ -10,40 +10,16 @@ export class Player extends React.Component {
 
     render() {
         return (
-            <div className="container">
-                <div className="row">
-                    {/*Empty to create padding*/}
+            <div className='boxed'>
+                <div className='two rows'>
+                    {/*Empty for Padding*/}
                 </div>
-
-                <div className="row">
-                    {/*Empty to create padding*/}
+                <div className='eight rows'>
+                    Content
                 </div>
-
-                <div className = "row">
+                <div className='two rows'>
+                    {/*Empty for Padding*/}
                 </div>
-
-                <div className = "row"> 
-                </div> 
-
-                <div className="row">
-                    <div className="two columns">
-
-                    </div>
-
-                    <div className="eight columns">
-                        <center>
-                        <div className="boxed">
-                                Content
-                        </div>
-                        </center>
-                    </div>
-
-                    <div className="two columns">
-                        {/*Empty to create padding*/}
-                    </div>
-                </div>
-
-
             </div>
         )
     }

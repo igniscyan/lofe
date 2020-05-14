@@ -16,7 +16,7 @@ export class NavBar extends React.Component {
   render() {
     //Breaking these button elements into a component template might improve modularity, but it works as-is for this application.
     return (
-      <div className="container">
+      <div>
         <div className="row">
           <div className="four columns">
             {/*The image functions the same as the Home button on click (it's wrapped in an anchor with an empty href, which is currently throwing a warning)*/}

@@ -5,6 +5,17 @@ import { NavBar } from '../NavBar/NavBar';
 import { PageContent } from '../PageContent/PageContent';
 import { Player } from '../Player/Player';
 
+/*Styling Section:*/
+const NavBarStyle = {
+  backgroundColor: "#000000",
+  fontFamily: "Play-Bold"
+}
+
+const PageContentStyle = {
+  backgroundColor: "#FFFFFF",
+  fontFamily: "Play-Regular"
+}
+
 export class App extends React.Component {
   constructor(props) {
     super(props);
@@ -34,9 +45,13 @@ export class App extends React.Component {
   render() {
     return (
       <div>
-        <NavBar handleClick={this.updatePageContent} />
-        <PageContent page={this.state.page} />
-        <Player / >
+        <div style={NavBarStyle} className="u-fill-max-width">
+          <NavBar handleClick={this.updatePageContent} />
+        </div>
+        <br />
+        <div className="container u-fill-max-width" style={PageContentStyle}>
+          <PageContent page={this.state.page} />
+        </div>
       </div>
     );
   }
