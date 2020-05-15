@@ -45,7 +45,7 @@ export class App extends React.Component {
   render() {
     return (
       <div>
-        <div style={NavBarStyle} className="u-fill-max-width">
+        <div style={NavBarStyle} className="container">
           <NavBar handleClick={this.updatePageContent} />
         </div>
         <br />
