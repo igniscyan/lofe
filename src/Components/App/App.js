@@ -3,7 +3,8 @@ import React from 'react';
 import './App.css';
 import { NavBar } from '../NavBar/NavBar';
 import { PageContent } from '../PageContent/PageContent';
-import { Player } from '../Player/Player';
+//Commenting this line out until it's used
+//import { Player } from '../Player/Player';
 
 /*Styling Section:*/
 const NavBarStyle = {
