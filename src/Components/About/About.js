@@ -1,12 +1,12 @@
 import React from 'react';
 import './About.css';
+var json = require('./about.json');
 
 
 export class About extends React.Component {
     constructor(props) { 
         super(props);
-        this.state = {}; 
-        this.background = []; 
+        this.state = {};
     }
 
 /*
@@ -18,13 +18,27 @@ photo and bio.
 
 
     render() { 
-        return (
-            <div className = 'one-half column'>
-                <h1>{this.props.member}</h1> 
-                <p>
-                    This is where the bio goes
-                </p>
-            </div>
-        )
+        switch(this.props.member) {
+            case 'Ryan':
+                return (
+                    <div className='one-half column'>
+                        <center><h1>Ryan</h1></center>
+                        <center> {json.Ryan.Image} </center>
+                        <center>  {json.Ryan.Bio} </center>
+                    </div>
+                )
+            case 'Curtis':
+                return ( 
+                    <div className = 'one-half column'>
+                        <center><h1>Curtis</h1></center>
+                        <center> {json.Curtis.Image} </center>
+                        <center> {json.Curtis.Bio} </center>
+                    </div> 
+                )
+            default:
+                return (
+                    <h1> No1 provided damn </h1>
+                )
+        }
     } 
 }

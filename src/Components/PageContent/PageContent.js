@@ -69,8 +69,8 @@ export class PageContent extends React.Component {
             </div>
           </div>
           <div className='row'>
-            <About />
-            <About />
+            <About member='Ryan'/>
+            <About member='Curtis' />
           </div>
           </div>
         );
