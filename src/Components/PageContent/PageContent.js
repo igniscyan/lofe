@@ -66,6 +66,7 @@ export class PageContent extends React.Component {
             </div>
             <div className='four column'>
                 <center><h1>About</h1></center>
+                <About member = 'General' />
             </div>
             <div className='four column'>
 
