@@ -3,6 +3,7 @@ import './About.css';
 var json = require('./about.json');
 
 
+
 export class About extends React.Component {
     constructor(props) { 
         super(props);
@@ -23,15 +24,16 @@ photo and bio.
                 return (
                     <div className='one-half column'>
                         <center><h1>Ryan</h1></center>
-                        <center> {json.Ryan.Image} </center>
-                        <center>  {json.Ryan.Bio} </center>
+                        <center>  <img src={require('./lo.png')} /> </center>
                     </div>
                 )
             case 'Curtis':
                 return ( 
                     <div className = 'one-half column'>
                         <center><h1>Curtis</h1></center>
-                        <center> {json.Curtis.Image} </center>
+                        <center>
+                            <img src={require('./lo.png')}/>
+                        </center>
                         <center> {json.Curtis.Bio} </center>
                     </div> 
                 )

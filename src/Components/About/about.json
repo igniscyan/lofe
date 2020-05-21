@@ -1,10 +1,10 @@
 {
     "Curtis": {
         "Bio": "This is Curtis' Bio",
-        "Image": "path/to/curtis/image.png"
+        "Image": "./lo.png"
     },
     "Ryan": {
         "Bio": "This is Ryan's bio",
-        "Image": "path/to/ryans/image.png"
+        "Image": "./lo.png"
     }
 }
