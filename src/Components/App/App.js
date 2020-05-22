@@ -3,6 +3,19 @@ import React from 'react';
 import './App.css';
 import { NavBar } from '../NavBar/NavBar';
 import { PageContent } from '../PageContent/PageContent';
+//Commenting this line out until it's used
+//import { Player } from '../Player/Player';
+
+/*Styling Section:*/
+const NavBarStyle = {
+  backgroundColor: "#000000",
+  fontFamily: "Play-Bold"
+}
+
+const PageContentStyle = {
+  backgroundColor: "#FFFFFF",
+  fontFamily: "Play-Regular"
+}
 
 export class App extends React.Component {
   constructor(props) {
@@ -33,8 +46,13 @@ export class App extends React.Component {
   render() {
     return (
       <div>
-        <NavBar handleClick={this.updatePageContent} />
-        <PageContent page={this.state.page} />
+        <div style={NavBarStyle} className="container">
+          <NavBar handleClick={this.updatePageContent} />
+        </div>
+        <br />
+        <div className="container u-fill-max-width" style={PageContentStyle}>
+          <PageContent page={this.state.page} />
+        </div>
       </div>
     );
   }
