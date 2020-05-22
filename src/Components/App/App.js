@@ -3,7 +3,8 @@ import React from 'react';
 import './App.css';
 import { NavBar } from '../NavBar/NavBar';
 import { PageContent } from '../PageContent/PageContent';
-import { Player } from '../Player/Player';
+//Commenting this line out until it's used
+//import { Player } from '../Player/Player';
 
 /*Styling Section:*/
 const NavBarStyle = {
@@ -49,7 +50,8 @@ export class App extends React.Component {
   render() {
     return (
       <div>
-        <div style={NavBarStyle} className="row u-fill-max-width">
+
+        <div style={NavBarStyle} className="container">
           <NavBar handleClick={this.updatePageContent} />
         </div>
         <div className="container u-fill-max-width" style={PageContentStyle}>
