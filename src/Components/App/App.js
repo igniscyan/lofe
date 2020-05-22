@@ -7,14 +7,18 @@ import { Player } from '../Player/Player';
 
 /*Styling Section:*/
 const NavBarStyle = {
-  backgroundColor: "#000000",
-  fontFamily: "Play-Bold"
-}
+  backgroundImage: 'linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0))',
+  fontFamily: 'Play-Bold',
+  position: 'fixed',
+  width: '100%',
+};
+
+const fade = {};
 
 const PageContentStyle = {
-  backgroundColor: "#FFFFFF",
-  fontFamily: "Play-Regular"
-}
+  backgroundImage: '',
+  fontFamily: 'Play-Regular',
+};
 
 export class App extends React.Component {
   constructor(props) {
@@ -45,10 +49,9 @@ export class App extends React.Component {
   render() {
     return (
       <div>
-        <div style={NavBarStyle} className="u-fill-max-width">
+        <div style={NavBarStyle} className="row u-fill-max-width">
           <NavBar handleClick={this.updatePageContent} />
         </div>
-        <br />
         <div className="container u-fill-max-width" style={PageContentStyle}>
           <PageContent page={this.state.page} />
         </div>
