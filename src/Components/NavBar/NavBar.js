@@ -1,56 +1,66 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './NavBar.css';
 import Logo from './logo.png';
+import {useSpring, animated} from 'react-spring'
 
-export class NavBar extends React.Component {
-  constructor(props) {
-    super(props);
+export const NavBar = (props) => {
+  
+  const fade = useSpring({
+    from: {
+      opacity: 0
+    },
+    opacity: 1
+  })
 
-    this.handleClick = this.handleClick.bind(this);
-  }
+  const [isToggled, setToggle] = useState(false);
+  
+  const test = useSpring({
+    opacity: isToggled ? 0.5 : 1,
+    webkitFilter: isToggled ? 'invert(1)' : 'invert(0)',
+    filter: isToggled ? 'invert(1)' : 'invert(0)'
+  })
 
-  handleClick(e) {
-    this.props.handleClick(e.target.value);
-  }
+  const handleClick = (e) => {
+    props.handleClick(e.target.value);
+  };
 
-  render() {
-    //Breaking these button elements into a component template might improve modularity, but it works as-is for this application.
-    return (
-      <div>
-        <div className="row">
-          <div className="four columns">
+  return (
+    <div>
+      <div className="row">
+          <animated.div className="four columns" style={fade}>
             {/*The image functions the same as the Home button on click (it's wrapped in an anchor with an empty href, which is currently throwing a warning)*/}
-            <a onClick={this.handleClick} href="">
+            <animated.a onClick={handleClick} href="" style={test}>
               <img
                 src={Logo}
                 alt="locals only sound logo"
                 width="205"
                 height="37"
+                onMouseOver={() => setToggle(!isToggled)}
+                onMouseOut={() => setToggle(!isToggled)}
               />
-            </a>
-          </div>
+            </animated.a>
+          </animated.div>
           <div className="two columns">
-            <button onClick={this.handleClick} value="Home">
+            <button onClick={handleClick} value="Home">
               Home
             </button>
           </div>
           <div className="two columns">
-            <button onClick={this.handleClick} value="TourDates">
+            <button onClick={handleClick} value="TourDates">
               Tour Dates
             </button>
           </div>
           <div className="two columns">
-            <button onClick={this.handleClick} value="Store">
+            <button onClick={handleClick} value="Store">
               Store
             </button>
           </div>
           <div className="two columns">
-            <button onClick={this.handleClick} value="About">
+            <button onClick={handleClick} value="About">
               About
             </button>
           </div>
         </div>
-      </div>
-    );
-  }
+    </div >
+  );
 }

@@ -120,6 +120,7 @@ export class PageContent extends React.Component {
         );
       case 'About':
         return (
+          <div>
           <div className="row">
             <div className="one-third column">
               <h1>About</h1>

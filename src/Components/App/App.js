@@ -8,13 +8,11 @@ import { PageContent } from '../PageContent/PageContent';
 
 /*Styling Section:*/
 const NavBarStyle = {
-  backgroundImage: 'linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0))',
+  background: 'rgb(0,0,0)',
   fontFamily: 'Play-Bold',
-  position: 'fixed',
+  // position: 'fixed',
   width: '100%',
 };
-
-const fade = {};
 
 const PageContentStyle = {
   backgroundImage: '',
