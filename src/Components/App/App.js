@@ -1,28 +1,28 @@
-import React from 'react';
+import React from "react";
 //import logo from '../../../public/logo.png';
-import './App.css';
-import { NavBar } from '../NavBar/NavBar';
-import { PageContent } from '../PageContent/PageContent';
+import "./App.css";
+import { NavBar } from "../NavBar/NavBar";
+import { PageContent } from "../PageContent/PageContent";
 //Commenting this line out until it's used
 //import { Player } from '../Player/Player';
 
 /*Styling Section:*/
 const NavBarStyle = {
-  background: 'rgb(0,0,0)',
-  fontFamily: 'Play-Bold',
+  background: "rgb(0,0,0)",
+  fontFamily: "Play-Bold",
   // position: 'fixed',
-  width: '100%',
+  width: "100%",
 };
 
 const PageContentStyle = {
-  backgroundImage: '',
-  fontFamily: 'Play-Regular',
+  backgroundImage: "",
+  fontFamily: "Play-Regular",
 };
 
 export class App extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { page: 'Home' };
+    this.state = { page: "Home" };
 
     this.updatePageContent = this.updatePageContent.bind(this);
   }
@@ -48,11 +48,10 @@ export class App extends React.Component {
   render() {
     return (
       <div>
-
-        <div style={NavBarStyle} className="container">
+        <div style={NavBarStyle} className="">
           <NavBar handleClick={this.updatePageContent} />
         </div>
-        <div className="container u-fill-max-width" style={PageContentStyle}>
+        <div className="" style={PageContentStyle}>
           <PageContent page={this.state.page} />
         </div>
       </div>
