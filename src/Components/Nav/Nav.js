@@ -1,14 +1,25 @@
 import React from "react";
 import { animated, useSpring } from "react-spring";
 
-export const Nav = (props) => {
+export const Nav = ({ style, handleClick }) => {
   return (
-    <animated.div className="nav-wrapper">
+    <animated.div className="nav-wrapper" style={style}>
       <nav>
-        <button onClick={props.handleClick}>Home</button>
-        <button onClick={props.handleClick}>About</button>
-        <button onClick={props.handleClick}>Store</button>
-        <button onClick={props.handleClick}>Tool</button>
+        <button onClick={handleClick} value="Home">
+          Home
+        </button>
+        <button onClick={handleClick} value="About">
+          About
+        </button>
+        <button onClick={handleClick} value="Store">
+          Store
+        </button>
+        <button onClick={handleClick} value="TourDates">
+          Tour Dates
+        </button>
+        <button onClick={handleClick} value="Tool">
+          Tool
+        </button>
       </nav>
     </animated.div>
   );

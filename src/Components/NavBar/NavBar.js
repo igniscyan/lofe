@@ -23,7 +23,9 @@ export const NavBar = (props) => {
   //nav open/closer
   const [isNavOpen, setNavOpen] = useState(false);
   const navSpring = useSpring({
-    transform: isNavOpen ? "translate3d(100%, 0, 0)" : "translate3d(0,0,0)",
+    transform: isNavOpen
+      ? "translate3d(0, 0, 0) scale(1)"
+      : "translate3d(100%,0,0) scale(0.6)",
   });
 
   const handleClick = (e) => {
@@ -31,7 +33,7 @@ export const NavBar = (props) => {
   };
 
   return (
-    <div>
+    <div className="">
       <div className="">
         <animated.div className="" style={fade}>
           {/*The image functions the same as the Home button on click (it's wrapped in an anchor with an empty href, which is currently throwing a warning)*/}
@@ -50,13 +52,16 @@ export const NavBar = (props) => {
               style={{
                 opacity,
               }}
+              className=""
             />
           </a>
         </animated.div>
         <div className=""> </div>
         <div className="">
-          <button onClick={() => setNavOpen(!isNavOpen)}>Menu</button>
-          <Nav style={navSpring} />
+          <button className="" onClick={() => setNavOpen(!isNavOpen)}>
+            Menu
+          </button>
+          <Nav style={navSpring} handleClick={handleClick} />
         </div>
       </div>
     </div>
