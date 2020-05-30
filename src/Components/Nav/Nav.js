@@ -1,9 +1,9 @@
 import React from "react";
 import { animated, useSpring } from "react-spring";
-
+import "./Nav.css"
 export const Nav = ({ style, handleClick }) => {
   return (
-    <animated.div className="nav-wrapper" style={style}>
+    <animated.div className="hnav" style={style}>
       <nav>
         <button onClick={handleClick} value="Home">
           Home

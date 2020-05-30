@@ -1,0 +1,12 @@
+/* @import "../App/App.css";
+
+
+.navItem {
+    grid-area: nav;
+    display: flex; 
+} */
+
+.side {
+  grid-column: 2 / 3;
+  grid-row: 3 / 4;
+}

@@ -61,7 +61,9 @@ export const NavBar = (props) => {
           <button className="" onClick={() => setNavOpen(!isNavOpen)}>
             Menu
           </button>
-          <Nav style={navSpring} handleClick={handleClick} />
+          <div className="side">
+            <Nav style={navSpring} handleClick={handleClick} />
+          </div>
         </div>
       </div>
     </div>

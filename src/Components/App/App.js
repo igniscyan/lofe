@@ -2,6 +2,7 @@ import React from "react";
 //import logo from '../../../public/logo.png';
 import "./App.css";
 import { NavBar } from "../NavBar/NavBar";
+import "../NavBar/NavBar.css"
 import { PageContent } from "../PageContent/PageContent";
 //Commenting this line out until it's used
 //import { Player } from '../Player/Player';
@@ -47,11 +48,11 @@ export class App extends React.Component {
 
   render() {
     return (
-      <div>
-        <div style={NavBarStyle} className="">
+      <div className="app-container">
+        <div style={NavBarStyle} className="header">
           <NavBar handleClick={this.updatePageContent} />
         </div>
-        <div className="" style={PageContentStyle}>
+        <div>
           <PageContent page={this.state.page} />
         </div>
       </div>
