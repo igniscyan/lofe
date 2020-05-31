@@ -1,56 +1,71 @@
-import React from 'react';
-import './NavBar.css';
-import Logo from './logo.png';
+import React, { useState } from "react";
+import "./NavBar.css";
+import Logo from "./logo.png";
+import { useSpring, animated } from "react-spring";
+import { Nav } from "../Nav/Nav";
 
-export class NavBar extends React.Component {
-  constructor(props) {
-    super(props);
+export const NavBar = (props) => {
+  //fade is done on initial render
+  const fade = useSpring({
+    from: {
+      opacity: 0,
+    },
+    opacity: 1,
+  });
 
-    this.handleClick = this.handleClick.bind(this);
-  }
+  const [isHovering, handleHover] = useState(false);
 
-  handleClick(e) {
-    this.props.handleClick(e.target.value);
-  }
+  //this one is done on hover (probably)
+  const { opacity } = useSpring({
+    opacity: isHovering ? 0.5 : 1,
+  });
 
-  render() {
-    //Breaking these button elements into a component template might improve modularity, but it works as-is for this application.
-    return (
-      <div>
-        <div className="row">
-          <div className="four columns">
-            {/*The image functions the same as the Home button on click (it's wrapped in an anchor with an empty href, which is currently throwing a warning)*/}
-            <a onClick={this.handleClick} href="">
-              <img
-                src={Logo}
-                alt="locals only sound logo"
-                width="205"
-                height="37"
-              />
-            </a>
-          </div>
-          <div className="two columns">
-            <button onClick={this.handleClick} value="Home">
-              Home
-            </button>
-          </div>
-          <div className="two columns">
-            <button onClick={this.handleClick} value="TourDates">
-              Tour Dates
-            </button>
-          </div>
-          <div className="two columns">
-            <button onClick={this.handleClick} value="Store">
-              Store
-            </button>
-          </div>
-          <div className="two columns">
-            <button onClick={this.handleClick} value="About">
-              About
-            </button>
+  //nav open/closer
+  const [isNavOpen, setNavOpen] = useState(false);
+  const navSpring = useSpring({
+    transform: isNavOpen
+      ? "translate3d(0, 0, 0) scale(1)"
+      : "translate3d(100%,0,0) scale(0.6)",
+  });
+
+  const handleClick = (e) => {
+    props.handleClick(e.target.value);
+  };
+
+  return (
+    <div className="">
+      <div className="">
+        <animated.div className="" style={fade}>
+          {/*The image functions the same as the Home button on click (it's wrapped in an anchor with an empty href, which is currently throwing a warning)*/}
+          <a
+            onClick={handleClick}
+            href=" "
+            onMouseOver={() => handleHover(!isHovering)}
+            onMouseOut={() => handleHover(!isHovering)}
+            value="Home"
+          >
+            <animated.img
+              src={Logo}
+              alt="locals only sound logo"
+              width="205"
+              height="37"
+              style={{
+                opacity,
+              }}
+              className=""
+            />
+          </a>
+        </animated.div>
+        <div className=""> </div>
+        <div className="">
+          <button className="" onClick={() => setNavOpen(!isNavOpen)}>
+            Menu
+          </button>
+          <div className="side">
+            <Nav style={navSpring} handleClick={handleClick} />
           </div>
         </div>
       </div>
-    );
-  }
-}
+    </div>
+  );
+};

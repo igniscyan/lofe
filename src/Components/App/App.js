@@ -1,26 +1,29 @@
-import React from 'react';
+import React from "react";
 //import logo from '../../../public/logo.png';
-import './App.css';
-import { NavBar } from '../NavBar/NavBar';
-import { PageContent } from '../PageContent/PageContent';
+import "./App.css";
+import { NavBar } from "../NavBar/NavBar";
+import "../NavBar/NavBar.css"
+import { PageContent } from "../PageContent/PageContent";
 //Commenting this line out until it's used
 //import { Player } from '../Player/Player';
 
 /*Styling Section:*/
 const NavBarStyle = {
-  backgroundColor: "#000000",
-  fontFamily: "Play-Bold"
-}
+  background: "rgb(0,0,0)",
+  fontFamily: "Play-Bold",
+  // position: 'fixed',
+  width: "100%",
+};
 
 const PageContentStyle = {
-  backgroundColor: "#FFFFFF",
-  fontFamily: "Play-Regular"
-}
+  backgroundImage: "",
+  fontFamily: "Play-Regular",
+};
 
 export class App extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { page: 'Home' };
+    this.state = { page: "Home" };
 
     this.updatePageContent = this.updatePageContent.bind(this);
   }
@@ -45,12 +48,11 @@ export class App extends React.Component {
 
   render() {
     return (
-      <div>
-        <div style={NavBarStyle} className="container">
+      <div className="app-container">
+        <div style={NavBarStyle} className="header">
           <NavBar handleClick={this.updatePageContent} />
         </div>
-        <br />
-        <div className="container u-fill-max-width" style={PageContentStyle}>
+        <div>
           <PageContent page={this.state.page} />
         </div>
       </div>
