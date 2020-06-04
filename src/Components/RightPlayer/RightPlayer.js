@@ -3,7 +3,7 @@ import { useSpring, animated } from 'react-spring';
 import './Player.css';
 import opus1 from './opus1.png';
 
-const calc = (x, y) => [-(y - window.innerHeight / 2) / 20, ( x - window.innerWidth /4) / 20, 1.1];
+const calc = (x, y) => [-(y - window.innerHeight / 2) / 20, ( x - (3*window.innerWidth /4)) / 20, 1.1];
 const trans = (x, y, s) => `perspective(600px) rotateX(${x}deg) rotateY(${y}deg) scale(${s})`;
 
 export const Player = (props) => {

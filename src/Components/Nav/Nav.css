@@ -1,1 +1,4 @@
-.hnav {grid-area: hnav;}
+.hnav {
+    grid-area: hnav;
+    overflow: hidden; 
+}

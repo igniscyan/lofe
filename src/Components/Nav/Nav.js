@@ -1,6 +1,9 @@
 import React from "react";
 import { animated, useSpring } from "react-spring";
 import "./Nav.css"
+
+
+
 export const Nav = ({ style, handleClick }) => {
   return (
     <animated.div className="hnav" style={style}>
