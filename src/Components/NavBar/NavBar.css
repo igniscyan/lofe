@@ -1,13 +1,22 @@
-/* @import "../App/App.css";
+.container {
+  display: flex; 
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
 
+.container > .linkLeft {
+  order: 1;
+  flex-shrink: 3; 
+}
 
-.navItem {
-    grid-area: nav;
-    display: flex; 
-} */
+.container > .logo {
+  order: 2; 
+  flex-shrink: 3; 
+  position: center; 
+}
 
-.side {
-  overflow: hidden;
-  grid-column: 2 / 3;
-  grid-row: 3 / 4;
+.container > .linkRight { 
+  order: 3;
+  flex-shrink: 3; 
 }
