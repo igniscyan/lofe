@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'OPTIEdgarBold-Extended';
+    src:url('OPTIEdgarBold-Extended.ttf.woff') format('woff'),
+        url('OPTIEdgarBold-Extended.ttf.svg#OPTIEdgarBold-Extended') format('svg'),
+        url('OPTIEdgarBold-Extended.ttf.eot'),
+        url('OPTIEdgarBold-Extended.ttf.eot?#iefix') format('embedded-opentype'); 
+    font-weight: normal;
+    font-style: normal;
+}

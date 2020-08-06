@@ -1,25 +1,11 @@
-@import "../App/App.css";
-
-.Home {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(3, auto);
-  grid-gap: 10px;
-  /* height: 100vh; */
-}
-
-.title {
-    grid-column: 1 / span 2;
-    grid-row: 1 / span 1; 
-    position: center;
-}
-
-.player1{
-    grid-column: 1 / span 2;
-    grid-row: 2 / span 1; 
-}
-
-.player2{
-    grid-column: 1 / span 2;
-    grid-row: 3 / span 1;
-}
+.gridCont {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 1px 1px;
+    grid-template-areas: "Header Header Header Header Header Header" ". Content Content Content Content ." ". Content Content Content Content ." ". Content Content Content Content ." ". Content Content Content Content .";
+  }
+  
+  .Header { grid-area: Header; }
+  
+  .Content { grid-area: Content; }

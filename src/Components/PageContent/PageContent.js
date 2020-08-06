@@ -19,18 +19,13 @@ export class PageContent extends React.Component {
     switch (this.props.page) {
       case "Home":
         return (
-          <div className="Home">
-            <h1 className="title">Locals Only Sound</h1>
-            <animated.div className="player1">
-              <center>
-                <Player imagesrc={opus1} />
-              </center>
-            </animated.div>
-            <animated.div className="player2">
-              <center>
-                <RightPlayer imagesrc={billions} />
-              </center>
-            </animated.div>
+          <div className="gridCont">
+            <div className ="content">
+              <p></p>
+            <h1 style={{color:'blue'}}>
+             sakl;fdjsakfaslk;d
+            </h1>
+            </div>
           </div>
         );
       case "TourDates":

@@ -19,12 +19,17 @@ export const NavBar = (props) => {
     //Springs
     const magnifySpring = useSpring ({
         height: isHovering ? '15vh' : '10vh',
-        boxShadow: isHovering ? '0px 10px 10px 0px rgba(0, 0, 0, 0.3)' : '0px 10px 10px 0px rgba(0, 0, 0, 0.1)',
+        boxShadow: isHovering ? '0px 10px 10px 0px rgba(0, 0, 0, 0.3)' 
+        : '0px 10px 10px 0px rgba(0, 0, 0, 0.1)',
     });
 
     return (
         <>
-            <animated.div onMouseOver={() => handleHover(true)} onMouseOut={() => handleHover(false)} style={{...magnifySpring,...style}} className="container">
+            <animated.div 
+            onMouseOver={() => handleHover(true)} 
+            onMouseOut={() => handleHover(false)} 
+            style={{...magnifySpring,...style}} 
+            className="container">
                 <animated.img
                     src={Logo}
                     alt="locals only sound logo"
@@ -32,6 +37,7 @@ export const NavBar = (props) => {
                     height="37"
                     className="logo"
                 />
+                <div className = "linkleft styledText">test</div>
             </animated.div>
         </>
     )
