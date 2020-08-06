@@ -1,35 +1,20 @@
-import React from "react";
+import React from 'react';
 //import logo from '../../../public/logo.png';
-import "./App.css";
-import { NavBar } from "../NavBar/NavBar";
-import "../NavBar/NavBar.css"
-import { Preloader } from "../Preloader/Preloader";
-import { PageContent } from "../PageContent/PageContent"
-//Commenting this line out until it's used
-//import { Player } from '../Player/Player';
+import './App.css';
+import { NavBar } from '../NavBar/NavBar';
+import { Preloader } from '../Preloader/Preloader';
+import { PageContent } from '../PageContent/PageContent';
+import { About } from '../About/About';
+import { Footer } from '../Footer/Footer';
 
 export const App = (props) => {
   return (
     <>
       <Preloader />
       <NavBar />
-      <PageContent page="Home"/>
-      
-
+      <PageContent />
+      <About />
+      <Footer />
     </>
   );
-}
-
-// export class App extends React.Component {
-//   constructor(props) {
-//     super(props);
-//     this.state = { page: 'Home' };
-
-//     this.updatePageContent = this.updatePageContent.bind(this);
-//   }
-
-//   updatePageContent(page) {
-//     this.setState({
-//       page: page,
-//     });
-//   }
+};

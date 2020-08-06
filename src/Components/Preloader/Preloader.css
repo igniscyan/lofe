@@ -1,0 +1,10 @@
+.flex-container {
+  /*add CSS to make the logo vertically and horizontally centered within its container, using flexbox*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-item {
+  text-align: center;
+}

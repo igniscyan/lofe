@@ -1,7 +1,7 @@
-@import url("../../style.css");
+@import url('../../style.css');
 
 .container {
-  display: flex; 
+  display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: center;
@@ -9,22 +9,21 @@
 
 .container > .linkLeft {
   order: 1;
-  flex-shrink: 3; 
+  flex-shrink: 3;
 }
 
 .container > .logo {
-  order: 2; 
-  flex-shrink: 3; 
-  position: center; 
+  order: 2;
+  flex-shrink: 3;
+  position: center;
 }
 
-.container > .linkRight { 
+.container > .linkRight {
   order: 3;
-  flex-shrink: 3; 
+  flex-shrink: 3;
 }
 
-
-.styledText{
+.styledText {
   font-family: 'OPTIEdgarBold-Extended';
   color: white;
 }
