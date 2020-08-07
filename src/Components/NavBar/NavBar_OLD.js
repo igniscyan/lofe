@@ -1,8 +1,8 @@
-import React, { useState } from "react";
-import "./NavBar.css";
-import Logo from "./logo.png";
-import { useSpring, animated } from "react-spring";
-import { Nav } from "../Nav/Nav";
+import React, { useState } from 'react';
+import './NavBar.css';
+import Logo from './logo.png';
+import { useSpring, animated } from 'react-spring';
+import { Nav } from '../Nav/Nav';
 
 export const NavBar = (props) => {
   //fade is done on initial render
@@ -24,8 +24,8 @@ export const NavBar = (props) => {
   const [isNavOpen, setNavOpen] = useState(false);
   const navSpring = useSpring({
     transform: isNavOpen
-      ? "translate3d(0, 0, 0) scale(1)"
-      : "translate3d(100%,0,0) scale(0.6)",
+      ? 'translate3d(0, 0, 0) scale(1)'
+      : 'translate3d(100%,0,0) scale(0.6)',
   });
 
   const handleClick = (e) => {
@@ -42,8 +42,7 @@ export const NavBar = (props) => {
             href=" "
             onMouseOver={() => handleHover(!isHovering)}
             onMouseOut={() => handleHover(!isHovering)}
-            value="Home"
-          >
+            value="Home">
             <animated.img
               src={Logo}
               alt="locals only sound logo"
