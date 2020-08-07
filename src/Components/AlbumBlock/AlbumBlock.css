@@ -1,5 +1,12 @@
+@import url('../../style.css');
+
 .ab-container {
   display: flex;
   flex-flow: column nowrap;
   padding-top: 5vh;
+}
+
+.ab-header {
+  font-family: 'OPTIEdgarBold-Extended';
+  color: #000;
 }

@@ -8,7 +8,7 @@ import './AlbumBlock.css';
 export const AlbumBlock = (props) => {
   return (
     <div className="ab-container">
-      <h1>{props.name}</h1>
+      <h1 className="ab-header">{props.name}</h1>
     </div>
   );
 };

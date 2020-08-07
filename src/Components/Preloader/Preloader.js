@@ -6,7 +6,7 @@ import { useSpring, animated } from 'react-spring';
 const style = {
   backgroundColor: '#000',
   width: '100vw',
-  position: 'absolute',
+  position: 'fixed',
   boxShadow: '0px 10px 10px 0px rgba(0, 0, 0, 0.2)',
 };
 
