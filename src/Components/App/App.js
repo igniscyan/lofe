@@ -6,15 +6,19 @@ import { Preloader } from '../Preloader/Preloader';
 import { PageContent } from '../PageContent/PageContent';
 import { About } from '../About/About';
 import { Footer } from '../Footer/Footer';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 export const App = (props) => {
   return (
     <>
-      <Preloader />
-      <NavBar />
+    <Preloader />
+    <NavBar />
+    <Switch>
+      <Route
       <PageContent />
       <About />
       <Footer />
+    </Switch>
     </>
   );
 };
