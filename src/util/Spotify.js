@@ -1,6 +1,7 @@
 //Spotify API interfacing functions will go here
 //Redirect URI: http://localhost:8888/callback
-
+import axios from 'axios';
+import qs from 'qs';
 const clientSecret = '8e248345498646798523d0a0c65a652f';
 const clientID = '34e7f94cb9ed410b879620808babd55e'; //we should find a way to hide this.
 const base64ID = 'MzRlN2Y5NGNiOWVkNDEwYjg3OTYyMDgwOGJhYmQ1NWU=';
@@ -21,21 +22,40 @@ export const Spotify = {
     }
     //if no accessToken, we get a new one
     else {
-      let tokenResponse = await fetch(
-        `https://accounts.spotify.com/api/token`,
-        {
-          headers: {
-            Authorization: `Basic ${encodedClient}`,
-          },
-          method: 'POST',
-          body: JSON.stringify({ grant_type: 'client_credentials' }),
-        }
-      );
-      let tokenJSON = await tokenResponse.json();
-      accessToken = tokenJSON.access_token;
-      expiresIn = tokenJSON.expires_in;
-      window.setTimeout(() => (accessToken = ''), expiresIn * 1000);
-      window.history.pushState('Access Token', null, '/');
+      // let tokenResponse = await fetch(
+      //   `https://accounts.spotify.com/api/token`,
+      //   {
+      //     headers: {
+      //       Authorization: `Basic ${encodedClient}`,
+      //     },
+      //     method: 'POST',
+      //     body: JSON.stringify({ grant_type: 'client_credentials' }),
+      //   }
+      // );
+      // let tokenJSON = await tokenResponse.json();
+      // accessToken = tokenJSON.access_token;
+      // expiresIn = tokenJSON.expires_in;
+      // window.setTimeout(() => (accessToken = ''), expiresIn * 1000);
+      // window.history.pushState('Access Token', null, '/');
+      // return accessToken;
+      const headers = {
+        headers: {
+          Accept: 'application/json',
+          'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        auth: {
+          username: clientID,
+          password: clientSecret,
+        },
+      };
+
+      const data = {
+        grant_type: 'client_credentials',
+      };
+
+      const res = await axios.post('https://accounts.spotify.com/api/token', qs.stringify(data), headers);
+
+      accessToken = res.data.access_token;
       return accessToken;
     }
   },
