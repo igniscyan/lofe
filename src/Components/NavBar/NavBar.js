@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './NavBar.css';
 import Logo from './logo.png';
 import { useSpring, animated } from 'react-spring';
+import { Link } from 'react-router-dom';
 
 export const NavBar = (props) => {
   //States
@@ -48,52 +49,52 @@ export const NavBar = (props) => {
 
   return (
     <>
-      <animated.div
+      <animated.ul
         onMouseOver={() => handleHover(true)}
         onMouseOut={() => handleHover(false)}
         style={{ ...magnifySpring }}
         className="container">
-        <animated.a href="#" className="logo">
-          <animated.img
-            src={Logo}
-            alt="locals only sound logo"
-            width="205"
-            height="37"
-          />
-        </animated.a>
-        <animated.a
+        <animated.li
           className="linkLeft styledText"
-          href="#"
           style={{ ...fadeSpring, ...homeSpring }}
           onMouseOver={() => handleHomeHover(true)}
           onMouseOut={() => handleHomeHover(false)}>
-          Home
-        </animated.a>
-        <animated.a
+          <Link to="/">Home</Link>
+        </animated.li>
+        <animated.li
           className="linkLeft styledText"
-          href="#"
           style={{ ...fadeSpring, ...storeSpring }}
           onMouseOver={() => handleStoreHover(true)}
           onMouseOut={() => handleStoreHover(false)}>
-          Store
-        </animated.a>
-        <animated.a
+          <a href="#" target="_blank">
+            Store
+          </a>
+        </animated.li>
+        <animated.li className="logo">
+          <Link to="/">
+            <animated.img
+              src={Logo}
+              alt="locals only sound logo"
+              width="205"
+              height="37"
+            />
+          </Link>
+        </animated.li>
+        <animated.li
           className="linkRight styledText"
-          href="#"
           style={{ ...fadeSpring, ...tourSpring }}
           onMouseOver={() => handleTourHover(true)}
           onMouseOut={() => handleTourHover(false)}>
-          Tour
-        </animated.a>
-        <animated.a
+          <Link to="/tourdates">Tour</Link>
+        </animated.li>
+        <animated.li
           className="linkRight styledText"
-          href="#"
           style={{ ...fadeSpring, ...toolSpring }}
           onMouseOver={() => handleToolHover(true)}
           onMouseOut={() => handleToolHover(false)}>
-          Tool
-        </animated.a>
-      </animated.div>
+          <Link to="/tool">Tool</Link>
+        </animated.li>
+      </animated.ul>
     </>
   );
 };

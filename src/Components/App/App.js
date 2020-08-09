@@ -3,22 +3,23 @@ import React from 'react';
 import './App.css';
 import { NavBar } from '../NavBar/NavBar';
 import { Preloader } from '../Preloader/Preloader';
-import { PageContent } from '../PageContent/PageContent';
+import { Home } from '../Home/Home';
 import { About } from '../About/About';
 import { Footer } from '../Footer/Footer';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { Tour } from '../Tour/Tour';
+import { Tool } from '../Tool/Tool';
+import { Route } from 'react-router-dom';
 
 export const App = (props) => {
   return (
     <>
-    <Preloader />
-    <NavBar />
-    <Switch>
-      <Route
-      <PageContent />
-      <About />
+      <Preloader />
+      <NavBar />
+      <Route exact path="/" component={Home} />
+      <Route exact path="/" component={About} />
+      <Route path="/tourdates" component={Tour} />
+      <Route path="/tool" component={Tool} />
       <Footer />
-    </Switch>
     </>
   );
 };
