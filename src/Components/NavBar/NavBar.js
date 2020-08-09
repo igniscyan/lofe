@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import './NavBar.css';
 import Logo from './logo.png';
 import { useSpring, animated } from 'react-spring';
-import { Nav } from '../Nav/Nav';
 
 export const NavBar = (props) => {
   //States
