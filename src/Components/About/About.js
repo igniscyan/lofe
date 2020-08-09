@@ -1,5 +1,7 @@
 import React from 'react';
 import './About.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFacebook, faSpotify } from '@fortawesome/free-brands-svg-icons';
 
 export const About = (props) => {
   return (
@@ -8,7 +10,7 @@ export const About = (props) => {
         <img src={require('./lo.png')} />
       </div>
       <div className="about-text">
-        <h2>About</h2>
+        <h2>ABOUT</h2>
         <p>
           {/* &nbsp;&nbsp;&nbsp;&nbsp; */} Locals Only Sound is a music
           collective founded by Gray Hawken and Curtis Smith. The product of
@@ -27,13 +29,15 @@ export const About = (props) => {
             and they will be in the column flow rather than as a row. */}
         <div>
           <a target="_blank" href="https://www.facebook.com/localsonlysound/">
+            <FontAwesomeIcon icon={faFacebook} />
             Social Media
           </a>
-          &nbsp;
+          &nbsp;&nbsp;
           <a
             target="_blank"
             href="https://open.spotify.com/artist/0FiWU7d449v3BcyuBhIOEh?si=nc943PZ3SKiWoYEf4qsSOQ">
-            Listen on Spotify
+            <FontAwesomeIcon icon={faSpotify} />
+            <u>Listen on Spotify</u>
           </a>
         </div>
       </div>

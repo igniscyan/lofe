@@ -45,7 +45,9 @@ export const NavBar = (props) => {
     opacity: isHovering ? (toolHovering ? '0.5' : '1') : '0',
   });
 
-  // const logoSpring = useSpring({});
+  const logoSpring = useSpring({
+    transform: isHovering ? 'scale(0.9)' : 'scale(1)',
+  });
 
   return (
     <>
@@ -59,7 +61,7 @@ export const NavBar = (props) => {
           style={{ ...fadeSpring, ...homeSpring }}
           onMouseOver={() => handleHomeHover(true)}
           onMouseOut={() => handleHomeHover(false)}>
-          <Link to="/">Home</Link>
+          <Link to="/">HOME</Link>
         </animated.li>
         <animated.li
           className="linkLeft styledText"
@@ -67,13 +69,14 @@ export const NavBar = (props) => {
           onMouseOver={() => handleStoreHover(true)}
           onMouseOut={() => handleStoreHover(false)}>
           <a href="#" target="_blank">
-            Store
+            STORE
           </a>
         </animated.li>
         <animated.li className="logo">
           <Link to="/">
             <animated.img
               src={Logo}
+              style={{ ...logoSpring }}
               alt="locals only sound logo"
               width="205"
               height="37"
@@ -85,14 +88,14 @@ export const NavBar = (props) => {
           style={{ ...fadeSpring, ...tourSpring }}
           onMouseOver={() => handleTourHover(true)}
           onMouseOut={() => handleTourHover(false)}>
-          <Link to="/tourdates">Tour</Link>
+          <Link to="/tourdates">TOUR</Link>
         </animated.li>
         <animated.li
           className="linkRight styledText"
           style={{ ...fadeSpring, ...toolSpring }}
           onMouseOver={() => handleToolHover(true)}
           onMouseOut={() => handleToolHover(false)}>
-          <Link to="/tool">Tool</Link>
+          <Link to="/tool">TOOL</Link>
         </animated.li>
       </animated.ul>
     </>
