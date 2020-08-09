@@ -7,12 +7,12 @@ import '../../util/localsonly.json';
 // The props ought to be named the same as the actual individual objects within that JSON file.
 // lofe > src > util > localsonly.json
 
-export const AlbumBlock = ({ album }) => {
+export const AlbumBlock = async ({ album }) => {
+  let albumInfo = await Spotify.getAlbum(album.id);
   return (
     <div className="ab-container">
-      <h1 className="ab-header">{Spotify.getAlbum(album.uri).name}</h1>
-      {console.log(album.uri)}
-      {/* <img src={Spotify.getAlbum(album.uri).images[0].url} /> */}
+      <h1 className="ab-header">{`${albumInfo.name}`}</h1>
+      <img src={albumInfo.img_src} alt={albumInfo.name} />
     </div>
   );
 };

@@ -2,6 +2,7 @@
   {
     "name": "Move With Me",
     "uri": "spotify:album:5RS7IQdbKdI8RBE3zN8iKa",
+    "id": "5RS7IQdbKdI8RBE3zN8iKa",
     "tracks": [
       {
         "name": "Move With Me",
@@ -12,6 +13,7 @@
   {
     "name": "OPUS 1",
     "uri": "spotify:album:2Vtg2HVMsUCDNpYLvyPaOy",
+    "id": "2Vtg2HVMsUCDNpYLvyPaOy",
     "tracks": [
       {
         "name": "ARP",
@@ -58,6 +60,7 @@
   {
     "name": "Billions",
     "uri": "spotify:album:1nIuVT44CF6sEno54kLNh0",
+    "id": "1nIuVT44CF6sEno54kLNh0",
     "tracks": [
       {
         "name": "Billions",
@@ -68,6 +71,7 @@
   {
     "name": "Talk",
     "uri": "spotify:album:0wXyF8YuwNVNy6JnNOCczQ",
+    "id": "0wXyF8YuwNVNy6JnNOCczQ",
     "tracks": [
       {
         "name": "Talk",

@@ -68,7 +68,7 @@ export const NavBar = (props) => {
           style={{ ...fadeSpring, ...storeSpring }}
           onMouseOver={() => handleStoreHover(true)}
           onMouseOut={() => handleStoreHover(false)}>
-          <a href="#" target="_blank">
+          <a href="/" target="_blank">
             STORE
           </a>
         </animated.li>

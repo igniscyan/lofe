@@ -7,7 +7,7 @@ export const About = (props) => {
   return (
     <div className="about-container">
       <div className="crop">
-        <img src={require('./lo.png')} />
+        <img src={require('./lo.png')} alt="curtis and ryan" />
       </div>
       <div className="about-text">
         <h2>ABOUT</h2>
@@ -28,14 +28,18 @@ export const About = (props) => {
         {/* this div needs to be here because otherwise the links will be children of the about-text flex container,
             and they will be in the column flow rather than as a row. */}
         <div>
-          <a target="_blank" href="https://www.facebook.com/localsonlysound/">
+          <a
+            target="_blank"
+            href="https://www.facebook.com/localsonlysound/"
+            rel="noopener noreferrer">
             <FontAwesomeIcon icon={faFacebook} />
             Social Media
           </a>
           &nbsp;&nbsp;
           <a
             target="_blank"
-            href="https://open.spotify.com/artist/0FiWU7d449v3BcyuBhIOEh?si=nc943PZ3SKiWoYEf4qsSOQ">
+            href="https://open.spotify.com/artist/0FiWU7d449v3BcyuBhIOEh?si=nc943PZ3SKiWoYEf4qsSOQ"
+            rel="noopener noreferrer">
             <FontAwesomeIcon icon={faSpotify} />
             <u>Listen on Spotify</u>
           </a>
