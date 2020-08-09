@@ -14,7 +14,7 @@ export const Home = (props) => {
       <div className="center-col-flex">
         {/* for each item in the JSON, we're gonna render a new AlbumBlock component */}
         {albumList.map((album) => {
-          return <AlbumBlock name={album.name} />;
+          return <AlbumBlock album={album} />;
         })}
       </div>
       <div></div>

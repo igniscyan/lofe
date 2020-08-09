@@ -1,59 +1,57 @@
 //Spotify API interfacing functions will go here
 //Redirect URI: http://localhost:8888/callback
 
-//HIDE THE FOLLOWING INFO BEFORE PUSHING TO GITHUB!
-//Client ID: 34e7f94cb9ed410b879620808babd55e
-//Client Secret: 8e248345498646798523d0a0c65a652f
-
 const clientSecret = '8e248345498646798523d0a0c65a652f';
-const clientID = '34e7f94cb9ed410b879620808babd55e';    //we should find a way to hide this.
-const redirectURI = 'http://localhost:8888/callback';   //this might be fucked.
+const clientID = '34e7f94cb9ed410b879620808babd55e'; //we should find a way to hide this.
+const base64ID = 'MzRlN2Y5NGNiOWVkNDEwYjg3OTYyMDgwOGJhYmQ1NWU=';
+const base64Secret = 'OGUyNDgzNDU0OTg2NDY3OTg1MjNkMGEwYzY1YTY1MmY=';
+const redirectURI = 'http:/localhost:3000';
+const encodedClient = btoa(`${clientID}:${clientSecret}`);
 
 //global variables
 let accessToken;
 let expiresIn;
 
-const Spotify = {
+export const Spotify = {
   //This is the most important function in the Spotify class
   async getAccessToken() {
     //if the accessToken has already been acquired then we can just return it
     if (accessToken) {
-        return accessToken;
+      return accessToken;
     }
     //if no accessToken, we get a new one
     else {
-        tokenResponse = await fetch(
-            `https://accounts.Spotify.com/api/token`,
-            {
-                body: 'grant_type=client_credentials',
-                method: 'POST',
-                headers: { Authorization: `Basic ${clientID}:${clientSecret}` }
-            }
-        );
-        let tokenJSON = await tokenResponse.json();
-        accessToken = tokenJSON.access_token;
-        expiresIn = tokenJSON.expires_in;
-        window.setTimeout(() => (accessToken = ''), expiresIn * 1000);
-        window.history.pushState('Access Token', null, '/');
-        return accessToken;
-    }    
+      let tokenResponse = await fetch(
+        `https://accounts.spotify.com/api/token`,
+        {
+          headers: {
+            Authorization: `Basic ${encodedClient}`,
+          },
+          method: 'POST',
+          body: JSON.stringify({ grant_type: 'client_credentials' }),
+        }
+      );
+      let tokenJSON = await tokenResponse.json();
+      accessToken = tokenJSON.access_token;
+      expiresIn = tokenJSON.expires_in;
+      window.setTimeout(() => (accessToken = ''), expiresIn * 1000);
+      window.history.pushState('Access Token', null, '/');
+      return accessToken;
+    }
   },
 
   async getAlbum(albumID) {
-      let response = await fetch(
-          `https://api.spotify.com/v1/album/${albumID}`,
-          {
-            method: 'GET',
-            headers: { Authorization: `Bearer ${getAccessToken()}`},
-          }
-      );
+    let response = await fetch(`https://api.spotify.com/v1/album/${albumID}`, {
+      method: 'GET',
+      headers: { Authorization: `Bearer ${this.getAccessToken()}` },
+    });
 
     let responseJSON = await response.json();
-    return responseJSON; 
+    return responseJSON;
   },
 
-  async play(track) { 
-      //logic for playing a selected track URI
+  async play(track) {
+    //logic for playing a selected track URI
   },
 
   async search(term) {
@@ -127,6 +125,5 @@ const Spotify = {
     );
   },
 };
- 
-export default Spotify;
 
+Spotify.getAccessToken();
