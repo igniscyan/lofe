@@ -6,10 +6,6 @@ import { useSpring, animated } from 'react-spring';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlayCircle } from '@fortawesome/free-solid-svg-icons';
 
-// Here is where we might wanna query our JSON of URIs and return specific info based on the name that's being passed as a prop.
-// The props ought to be named the same as the actual individual objects within that JSON file.
-// lofe > src > util > localsonly.json
-
 export const AlbumBlock = ({ query }) => {
   const [album, setAlbum] = useState({});
   const [hovering, setHovering] = useState(false);
