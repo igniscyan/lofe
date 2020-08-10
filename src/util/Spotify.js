@@ -53,10 +53,7 @@ export const Spotify = {
       },
     });
     let responseJSON = await response.json();
-    return {
-      name: responseJSON.name,
-      img_src: responseJSON.images[0].url,
-    };
+    return responseJSON;
   },
 
   async play(track) {

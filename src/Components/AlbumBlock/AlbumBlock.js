@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './AlbumBlock.css';
 import { Spotify } from '../../util/Spotify';
 import '../../util/localsonly.json';
@@ -7,12 +7,17 @@ import '../../util/localsonly.json';
 // The props ought to be named the same as the actual individual objects within that JSON file.
 // lofe > src > util > localsonly.json
 
-export const AlbumBlock = async ({ album }) => {
-  let albumInfo = await Spotify.getAlbum(album.id);
+export const AlbumBlock = ({ query }) => {
+  const [album, setAlbum] = useState({});
+
+  useEffect(() => {
+    Spotify.getAlbum(query.id).then((res) => setAlbum(res));
+  }, []);
+
   return (
     <div className="ab-container">
-      <h1 className="ab-header">{`${albumInfo.name}`}</h1>
-      <img src={albumInfo.img_src} alt={albumInfo.name} />
+      <h1 className="ab-header">{`${album.name}`}</h1>
+      <img src={album.images ? album.images[0].url : ''} alt={album.name} />
     </div>
   );
 };
