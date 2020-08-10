@@ -27,7 +27,7 @@ export const About = (props) => {
 
         {/* this div needs to be here because otherwise the links will be children of the about-text flex container,
             and they will be in the column flow rather than as a row. */}
-        <div>
+        <div className="about-links">
           <a
             target="_blank"
             href="https://www.facebook.com/localsonlysound/"
@@ -41,7 +41,7 @@ export const About = (props) => {
             href="https://open.spotify.com/artist/0FiWU7d449v3BcyuBhIOEh?si=nc943PZ3SKiWoYEf4qsSOQ"
             rel="noopener noreferrer">
             <FontAwesomeIcon icon={faSpotify} />
-            <u>Listen on Spotify</u>
+            Spotify
           </a>
         </div>
       </div>

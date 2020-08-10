@@ -6,7 +6,7 @@
   grid-template-rows: auto;
   grid-template-areas: 'pic text';
   padding: 1% 2% 1% 2%;
-  gap: 10px;
+  gap: 2rem;
   background-color: #000;
 }
 
@@ -34,11 +34,17 @@
 
 .about-text > p {
   text-align: left;
+  font-family: 'Courier Prime', monospace;
 }
 
 .about-text > h2 {
   font-family: 'OPTIEdgarBold-Extended';
   margin-bottom: 0;
+}
+
+.about-links {
+  font-family: 'Courier Prime', monospace;
+  font-style: italic;
 }
 
 a {

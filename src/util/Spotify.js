@@ -55,32 +55,4 @@ export const Spotify = {
     let responseJSON = await response.json();
     return responseJSON;
   },
-
-  async play(track) {
-    //logic for playing a selected track URI
-  },
-
-  async search(term) {
-    //fetch() returns a promise of a query for the track we want.
-    let response = await fetch(
-      `https://api.spotify.com/v1/search?type=track&q=${term.replace(
-        ' ',
-        '%20'
-      )}`,
-      { headers: { Authorization: `Bearer ${accessToken}` } }
-    );
-    //json() returns a promise with the original response formatted as a json object
-    let jsonResponse = await response.json();
-    //parse the json response using map() and return the formatted results
-    if (!jsonResponse.tracks) return [];
-    return jsonResponse.tracks.items.map((track) => {
-      return {
-        id: track.id,
-        name: track.name,
-        artists: track.artists[0].name,
-        album: track.album.name,
-        uri: track.uri,
-      };
-    });
-  },
 };

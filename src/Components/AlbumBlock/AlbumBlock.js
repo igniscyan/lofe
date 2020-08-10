@@ -16,7 +16,10 @@ export const AlbumBlock = ({ query }) => {
   const [buttonHovering, setButtonHovering] = useState(false);
 
   useEffect(() => {
-    Spotify.getAlbum(query.id).then((res) => setAlbum(res));
+    Spotify.getAlbum(query.id).then((res) => {
+      console.log(res);
+      setAlbum(res);
+    });
   }, []);
 
   const artSpring = useSpring({
@@ -30,7 +33,7 @@ export const AlbumBlock = ({ query }) => {
   });
 
   const cornerSpring = useSpring({
-    borderRadius: hovering ? '15px' : '0px',
+    borderRadius: hovering ? '20px' : '0px',
   });
 
   return (
