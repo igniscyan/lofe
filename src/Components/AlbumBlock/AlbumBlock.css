@@ -19,11 +19,12 @@
   z-index: 10;
 }
 
-.art-background {
+.art-container {
   background-color: #000;
   position: relative;
   max-width: 30vw;
   max-height: 30vw;
+  overflow: hidden;
 }
 
 .play-button {
@@ -31,7 +32,7 @@
   z-index: 30;
   text-align: center;
   position: absolute;
-  top: 11vw;
-  right: 11vw;
-  font-size: 8vw;
+  top: 10.5vw;
+  right: 10.5vw;
+  font-size: 9vw;
 }

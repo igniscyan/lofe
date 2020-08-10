@@ -1,6 +1,6 @@
 .base-grid-container {
   display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-columns: 2fr 3fr 2fr;
   grid-template-rows: auto;
   gap: 1px 1px;
   grid-template-areas: '. Main .';
@@ -14,5 +14,5 @@
   justify-content: center;
   align-items: center;
   flex-flow: column nowrap;
-  background-color: whitesmoke;
+  background-color: rgba(0, 0, 0, 0.05);
 }
