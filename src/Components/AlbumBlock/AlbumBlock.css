@@ -3,10 +3,35 @@
 .ab-container {
   display: flex;
   flex-flow: column nowrap;
-  padding-top: 5vh;
+  padding: 3vh 0 2vh 0;
 }
 
 .ab-header {
   font-family: 'OPTIEdgarBold-Extended';
   color: #000;
+  margin-bottom: 1vh;
+  font-size: 2vw;
+}
+
+.album-art {
+  width: 30vw;
+  height: 30vw;
+  z-index: 10;
+}
+
+.art-background {
+  background-color: #000;
+  position: relative;
+  max-width: 30vw;
+  max-height: 30vw;
+}
+
+.play-button {
+  color: #fff;
+  z-index: 30;
+  text-align: center;
+  position: absolute;
+  top: 11vw;
+  right: 11vw;
+  font-size: 8vw;
 }

@@ -11,7 +11,7 @@
 .center-col-flex {
   grid-area: Main;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
   flex-flow: column nowrap;
   background-color: whitesmoke;
