@@ -1,0 +1,82 @@
+[
+  {
+    "name": "Move With Me",
+    "uri": "spotify:album:5RS7IQdbKdI8RBE3zN8iKa",
+    "id": "5RS7IQdbKdI8RBE3zN8iKa",
+    "tracks": [
+      {
+        "name": "Move With Me",
+        "uri": "spotify:track:5To3UtP7q2TMwzYN3bElZs"
+      }
+    ]
+  },
+  {
+    "name": "OPUS 1",
+    "uri": "spotify:album:2Vtg2HVMsUCDNpYLvyPaOy",
+    "id": "2Vtg2HVMsUCDNpYLvyPaOy",
+    "tracks": [
+      {
+        "name": "ARP",
+        "uri": "spotify:track:1FZ2PLfs1i52jknLpbS3kR"
+      },
+      {
+        "name": "Talk",
+        "uri": "spotify:track:46tLReP0kmbherzfrv3v8C"
+      },
+      {
+        "name": "Selfish",
+        "uri": "spotify:track:31Su3Jf4m7mNbkCezgxFMu"
+      },
+      {
+        "name": "Talk ii",
+        "uri": "spotify:track:7L8eOFMyBb89T4VbfQ2NcH"
+      },
+      {
+        "name": "Tell Me Something",
+        "uri": "spotify:track:3kYn1Mhb3NuFRog89SvXqc"
+      },
+      {
+        "name": "Become",
+        "uri": "spotify:track:5yXDC7cY8QRy13YcLhULe7"
+      },
+      {
+        "name": "Talk iii",
+        "uri": "spotify:track:02HJfcETx5LOhMdwASWrBU"
+      },
+      {
+        "name": "Nights Get Cold",
+        "uri": "spotify:track:4IZa84XYxcUOh2748hZTT0"
+      },
+      {
+        "name": "Blowin' Up",
+        "uri": "spotify:track:5BjOgIjBbIvOi0r29PcpgV"
+      },
+      {
+        "name": "Father",
+        "uri": "spotify:track:7iF5fRzdGN29P0oF66slzv"
+      }
+    ]
+  },
+  {
+    "name": "Billions",
+    "uri": "spotify:album:1nIuVT44CF6sEno54kLNh0",
+    "id": "1nIuVT44CF6sEno54kLNh0",
+    "tracks": [
+      {
+        "name": "Billions",
+        "uri": "spotify:track:2GrpH1EEIRISpaXpcd3vRd"
+      }
+    ]
+  },
+  {
+    "name": "Talk",
+    "uri": "spotify:album:0wXyF8YuwNVNy6JnNOCczQ",
+    "id": "0wXyF8YuwNVNy6JnNOCczQ",
+    "tracks": [
+      {
+        "name": "Talk",
+        "uri": ""
+      }
+    ]
+  }
+]

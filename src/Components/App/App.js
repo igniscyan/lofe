@@ -1,61 +1,25 @@
-import React from "react";
+import React from 'react';
 //import logo from '../../../public/logo.png';
-import "./App.css";
-import { NavBar } from "../NavBar/NavBar";
-import "../NavBar/NavBar.css"
-import { PageContent } from "../PageContent/PageContent";
-//Commenting this line out until it's used
-//import { Player } from '../Player/Player';
+import './App.css';
+import { NavBar } from '../NavBar/NavBar';
+import { Preloader } from '../Preloader/Preloader';
+import { Home } from '../Home/Home';
+import { About } from '../About/About';
+import { Footer } from '../Footer/Footer';
+import { Tour } from '../Tour/Tour';
+import { Tool } from '../Tool/Tool';
+import { Route } from 'react-router-dom';
 
-/*Styling Section:*/
-const NavBarStyle = {
-  background: "rgb(0,0,0)",
-  fontFamily: "Play-Bold",
-  // position: 'fixed',
-  width: "100%",
+export const App = (props) => {
+  return (
+    <>
+      <Preloader />
+      <NavBar />
+      <Route exact path="/" component={Home} />
+      <Route exact path="/" component={About} />
+      <Route path="/tourdates" component={Tour} />
+      <Route path="/tool" component={Tool} />
+      <Footer />
+    </>
+  );
 };
-
-const PageContentStyle = {
-  backgroundImage: "",
-  fontFamily: "Play-Regular",
-};
-
-export class App extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { page: "Home" };
-
-    this.updatePageContent = this.updatePageContent.bind(this);
-  }
-
-  //Setting the state here allows new props to be passed to the PageContent component, alerting it to be updated.
-  //The basic flow is as follows:
-  /*
-  - Button gets clicked in NavBar
-  - onClick event listener sends the 'value' attribute of that button to NavBar's handleClick() method.
-  - handleClick() in NavBar calls updatePageContent (below) with the value it was given.
-  - handleClick() here sets the state of 'page' in the App.js file
-  - Once the state has been changed, the prop being passed to PageContent (pulled from this.state) is changed
-  - When the prop is changed, PageContent's willReceiveProps() method is pinged and it logs the value to the console.
-  - Then, shouldComponentUpdate() in PageContent will determine if a re-render is necessary (clicking Home while on Home will not change the page)
-  - If an update is valid, the page updates its content in a switch statement within the render function of PageContent
-  */
-  updatePageContent(page) {
-    this.setState({
-      page: page,
-    });
-  }
-
-  render() {
-    return (
-      <div className="app-container">
-        <div style={NavBarStyle} className="header">
-          <NavBar handleClick={this.updatePageContent} />
-        </div>
-        <div>
-          <PageContent page={this.state.page} />
-        </div>
-      </div>
-    );
-  }
-}

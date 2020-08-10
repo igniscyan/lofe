@@ -1,0 +1,52 @@
+@import url('../../style.css');
+
+.about-container {
+  display: grid;
+  grid-template-columns: 1fr 6fr;
+  grid-template-rows: auto;
+  grid-template-areas: 'pic text';
+  padding: 1% 2% 1% 2%;
+  gap: 2rem;
+  background-color: #000;
+}
+
+.crop {
+  grid-area: pic;
+  height: 15vw;
+  width: 15vw;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid white;
+}
+
+.crop > img {
+  height: 17vw;
+  width: 17vw;
+  margin: 0 0 0 -7%;
+}
+
+.about-text {
+  grid-area: text;
+  display: flex;
+  flex-flow: column nowrap;
+  color: #fff;
+}
+
+.about-text > p {
+  text-align: left;
+  font-family: 'Courier Prime', monospace;
+}
+
+.about-text > h2 {
+  font-family: 'OPTIEdgarBold-Extended';
+  margin-bottom: 0;
+}
+
+.about-links {
+  font-family: 'Courier Prime', monospace;
+  font-style: italic;
+}
+
+a {
+  color: #fff;
+}

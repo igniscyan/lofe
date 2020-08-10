@@ -1,12 +1,49 @@
-/* @import "../App/App.css";
+@import url('../../style.css');
 
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #000;
+  width: 100vw;
+  z-index: 15;
+  position: fixed;
+}
 
-.navItem {
-    grid-area: nav;
-    display: flex; 
-} */
+ul {
+  padding: 0;
+  margin: 0;
+}
 
-.side {
-  grid-column: 2 / 3;
-  grid-row: 3 / 4;
+/*  
+  Below is a hackey solution to an issue caused by flex with 5 items.
+  The logo is not truly centered, so when the preloader recedes to a lower z-index there is an annoying twitch
+  This fixes it to where it's practically invisible on MY Macbook, but it will not work on all devices.
+
+  The best solution would be to have the Preloader BE the NavBar, and use state hooks to maintain animations on it
+  when it is in its various positions. This way the logo on the Preloader will be the same as the one for the NavBar.
+
+  The NavBar is littered with bad, hackey, ugly code that I have written, and I do intend to make it cleaner as I get
+  more comofortable with react-spring, useState, and react-router-dom.
+  
+  --Boyd
+*/
+.logo {
+  margin-left: -2.7vw;
+}
+
+ul > li {
+  text-decoration: none;
+  list-style-type: none;
+}
+
+ul > li > a {
+  text-decoration: none;
+}
+
+.styledText {
+  font-family: 'OPTIEdgarBold-Extended';
+  color: white;
 }
