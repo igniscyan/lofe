@@ -25,7 +25,6 @@
         "name": "Talk",
         "uri": "spotify:track:46tLReP0kmbherzfrv3v8C",
         "previewLink": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview113/v4/8a/df/16/8adf16af-59b3-0b04-e7d2-867231f7da87/mzaf_7154702135417666957.plus.aac.p.m4a"
-
       },
       {
         "name": "Selfish",
@@ -88,8 +87,8 @@
     "tracks": [
       {
         "name": "Talk",
-        "uri": "",
-        "previewLink" : "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview118/v4/e6/56/42/e6564289-b761-2d4a-6b54-82df5a61dd5e/mzaf_335780297149107602.plus.aac.p.m4a"
+        "uri": "spotify:track:75xRhMAaBNs9NB7RMNjk0C",
+        "previewLink": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview118/v4/e6/56/42/e6564289-b761-2d4a-6b54-82df5a61dd5e/mzaf_335780297149107602.plus.aac.p.m4a"
       }
     ]
   }

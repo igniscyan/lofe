@@ -7,7 +7,7 @@ export const ATPair = (props) => {
   return (
     <>
       <AlbumBlock query={props.query} />
-      <TrackList name={props.query.name} />
+      <TrackList name={props.query.name} pauseAll={props.pauseAll} />
     </>
   );
 };

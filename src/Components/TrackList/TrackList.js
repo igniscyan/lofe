@@ -17,6 +17,8 @@ export const TrackList = (props) => {
                 key={song.name}
                 name={song.name}
                 song={song}
+                pauseAll={props.pauseAll}
+                id={`Audio-${song.name}`}
               />
             );
           });
