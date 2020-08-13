@@ -9,7 +9,7 @@ import { faSpinner as loading } from '@fortawesome/free-solid-svg-icons';
 
 export const Audio = (props) => {
   const [video, setVideo] = useState(undefined);
-  const [playing, setPlaying] = useState(false);
+  const [playState, setPlayState] = useState(play);
 
   useEffect(() => {
     setVideo(document.getElementById(props.song.uri));
@@ -19,10 +19,10 @@ export const Audio = (props) => {
   const togglePlay = (e) => {
     if (video.paused) {
       video.play();
-      e.target.icon = pause;
+      setPlayState(pause);
     } else {
       video.pause();
-      e.target.icon = play;
+      setPlayState(play);
     }
   };
 
@@ -32,17 +32,14 @@ export const Audio = (props) => {
         <source type="video/mp4" src={props.url}></source>
         Your browser does not support HTML5 video
       </video>
-      <span>
-        {video ? (
-          <FontAwesomeIcon
-            icon={video.paused ? play : pause}
-            onClick={togglePlay}
-          />
-        ) : (
-          <FontAwesomeIcon icon={loading} />
-        )}
-        <p>{props.name}</p>
-      </span>
+
+      {/* This checks to see if the video variable has been reassigned (i.e. if this is the first render cycle) */}
+      {video ? (
+        <FontAwesomeIcon icon={playState} onClick={togglePlay} />
+      ) : (
+        <FontAwesomeIcon icon={loading} />
+      )}
+      <p>{props.name}</p>
     </div>
   );
 };
