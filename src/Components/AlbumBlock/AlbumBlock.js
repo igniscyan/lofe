@@ -13,10 +13,9 @@ export const AlbumBlock = ({ query }) => {
 
   useEffect(() => {
     Spotify.getAlbum(query.id).then((res) => {
-      console.log(res);
       setAlbum(res);
     });
-  }, []);
+  }, [query.id]);
 
   const artSpring = useSpring({
     opacity: hovering ? 0.5 : 1,
@@ -53,7 +52,7 @@ export const AlbumBlock = ({ query }) => {
             onMouseOut={() => setButtonHovering(false)}
           />
         </animated.div>
-      </animated.div>
+     </animated.div>
     </div>
   );
 };

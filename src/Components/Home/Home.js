@@ -1,6 +1,6 @@
 import React from 'react';
 import './Home.css';
-import { AlbumBlock } from '../AlbumBlock/AlbumBlock';
+import {ATPair} from '../ATPair/ATPair';
 
 const albumList = require('../../util/localsonly.json');
 
@@ -14,7 +14,9 @@ export const Home = (props) => {
       <div className="center-col-flex">
         {/* for each item in the JSON, we're gonna render a new AlbumBlock component */}
         {albumList.map((item) => {
-          return <AlbumBlock query={item} key={item.name} />;
+          return (
+            <ATPair key={item.name} query={item}/>
+          )
         })}
       </div>
       <div></div>
