@@ -5,8 +5,9 @@ export const Audio = (props) => {
     console.log(props.name);
     return(
         <div>
+            {console.log(props.url)}
             <p>{props.name}</p>
-            <audio><source src={props.url}></source></audio>
+            <video src={props.url} autoPlay></video>
         </div>
     );
 }
