@@ -13,7 +13,6 @@ import { Route } from 'react-router-dom';
 export const App = (props) => {
   return (
     <>
-      <Preloader />
       <NavBar />
       <Route exact path="/" component={Home} />
       <Route exact path="/" component={About} />
