@@ -25,7 +25,7 @@ export const Audio = (props) => {
   };
 
   return (
-    <div className="audio-container">
+    <div className="audio-container" onClick={togglePlay}>
       <video
         id={props.song.uri}
         onPlay={() => setIcon(pause)}
@@ -36,11 +36,7 @@ export const Audio = (props) => {
 
       {/* This checks to see if the video variable has been reassigned (i.e. if this is the first render cycle) */}
       {video ? (
-        <FontAwesomeIcon
-          className="play-pause"
-          icon={icon}
-          onClick={togglePlay}
-        />
+        <FontAwesomeIcon className="play-pause" icon={icon} />
       ) : (
         <FontAwesomeIcon icon={loading} />
       )}
