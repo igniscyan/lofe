@@ -9,6 +9,8 @@ import { Tour } from '../Tour/Tour';
 import { Tool } from '../Tool/Tool';
 import { Route } from 'react-router-dom';
 
+console.log(process.env.REACT_APP_BAND_API_KEY);
+
 export const App = (props) => {
   return (
     <>
