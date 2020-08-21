@@ -18,3 +18,8 @@
   font-size: 30px;
 }
 
+::selection {
+  color: #fff;
+  background-color: #000;
+}
+

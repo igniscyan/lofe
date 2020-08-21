@@ -6,11 +6,16 @@ import { faFacebook, faSpotify } from '@fortawesome/free-brands-svg-icons';
 export const About = (props) => {
   return (
     <div className="about-container">
-      <div className="crop">
-        <img src={require('./lo.png')} alt="curtis and ryan" />
+      <div className="about-image-flex">
+        <div className="crop">
+          <img src={require("./lo.png")} alt="curtis and ryan" />
+        </div>
       </div>
       <div className="about-text">
-        <h2>ABOUT</h2>
+        <span>
+          <h2>ABOUT</h2>
+          <div></div>
+        </span>
         <p>
           {/* &nbsp;&nbsp;&nbsp;&nbsp; */} Locals Only Sound is a music
           collective founded by Gray Hawken and Curtis Smith. The product of
@@ -31,7 +36,8 @@ export const About = (props) => {
           <a
             target="_blank"
             href="https://www.facebook.com/localsonlysound/"
-            rel="noopener noreferrer">
+            rel="noopener noreferrer"
+          >
             <FontAwesomeIcon icon={faFacebook} />
             Social Media
           </a>
@@ -39,7 +45,8 @@ export const About = (props) => {
           <a
             target="_blank"
             href="https://open.spotify.com/artist/0FiWU7d449v3BcyuBhIOEh?si=nc943PZ3SKiWoYEf4qsSOQ"
-            rel="noopener noreferrer">
+            rel="noopener noreferrer"
+          >
             <FontAwesomeIcon icon={faSpotify} />
             Spotify
           </a>
