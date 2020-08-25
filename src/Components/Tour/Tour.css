@@ -20,6 +20,10 @@
   grid-template-areas: 'location time buttons';
 }
 
+.row{
+  display: contents;
+}
+
 .location {
   font-family: 'OPTIEdgarBold-Extended';
   grid-area: 'location';
@@ -40,4 +44,8 @@
   flex-flow: row nowrap;
   justify-content: flex-start;
   align-items: center;
+}
+.row:hover div {
+  background-color: #dbeaf4;
+  cursor: pointer; 
 }

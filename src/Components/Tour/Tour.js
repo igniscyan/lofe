@@ -28,14 +28,14 @@ export const Tour = (props) => {
 
           
           return (
-            <>
-              <div className="location">{json.venue.city},{json.venue.region} | {json.venue.name}</div>
+            <div className = "row">
+              <div className="location">{json.venue.city}, {json.venue.region} | {json.venue.name}</div>
     
               <div className="time">{dateString} </div>
 
               <div className="buttons"></div>
 
-            </>
+            </div>
           );
         })}
       </div>
