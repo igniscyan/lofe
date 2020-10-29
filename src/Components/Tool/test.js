@@ -1,5 +1,7 @@
 import './jul.mp3';
 
+//Major issue: sample not defined when it is being used (i.e., the mouseClicked() function)
+//Plan to try: Async/Await syntax on these subfunctions to ensure setup() is being ran before anything else
 export const test = p => {
   let playMode = 'sustain';
   let sample;
@@ -13,24 +15,21 @@ export const test = p => {
   p.draw = () => {
     p.background(255, 255, 0);
     let str = 'Click here to play! Press key to toggle play mode.';
-    str += ' Current Play Mode: ' + this.playMode + '.';
+    str += ' Current Play Mode: ' + playMode + '.';
     p.text(str, 10, p.height / 2);
   };
 
   p.mouseClicked = () => {
-    sample.p.play();
+    sample.play();
   };
 
   p.keyPressed = (k) => {
-    p.togglePlayMode();
-  };
-
-  p.togglePlayMode = () => {
-    if (p.playMode === 'sustain') {
-    } else {
-      p.playMode = 'restart';
-      p.playMode = 'sustain';
+    if (playMode === 'sustain') {
+      playMode = 'restart';
+    } 
+    else {
+      playMode = 'sustain';
     };
-    sample.p.playMode(playMode);
-  }
+    sample.playMode(playMode);
+  };
 };
