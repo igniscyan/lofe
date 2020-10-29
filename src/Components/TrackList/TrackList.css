@@ -1,0 +1,14 @@
+.tracklist-container {
+  color: #fff;
+  font-size: 3vmin;
+}
+
+.tracklist-container {
+  width: 30vw;
+  height: 30vw;
+  overflow-x: hidden;
+  overflow-y: auto;
+  position: absolute;
+  z-index: 7;
+  top: 6vw;
+}

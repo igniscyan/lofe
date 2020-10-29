@@ -1,0 +1,26 @@
+video {
+  height: 0;
+  width: 0;
+}
+
+.song-title {
+  font-family: 'Courier Prime', monospace;
+}
+
+.audio-container {
+  display: flex;
+  flex-flow: row nowrap;
+  max-width: 30vw;
+  max-height: 30vw;
+  align-items: center;
+  justify-content: flex-start;
+  border-bottom: 1px solid white;
+}
+
+.audio-container:hover {
+  cursor: pointer;
+}
+
+.play-pause {
+  padding: 1vw 1vw;
+}
