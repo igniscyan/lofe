@@ -5,8 +5,7 @@ This repository contains the front end source files for the [Locals Only Sound](
 
 ## How was it made?
 
-As the boilerplate `README` junk from below may suggest, the foundations for our react app was created with Facebook's `create-react-app` NPM package (Link below). In addition to this, we have utilized [Skeleton](http://getskeleton.com/) to make the CSS less of a migraine to everyone involved in the project. 
-
+As the boilerplate `README` junk from below may suggest, the foundations for our react app was created with Facebook's `create-react-app` NPM package (Link below).
 ## Contributing
 Find an issue you'd like to work on, and get cracking. We are following [ES6 Standards](http://es6-features.org/), and working very hard to keep everyone on the same page. So if you do anything byzantine, leave a comment that will help everyone else figure out what is going on. 
 
