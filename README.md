@@ -15,7 +15,7 @@ Commit your code to the appropriate branch, and include a short but descriptive 
 
 Expect this portion of the document to change often. 
 
-ANTICIPATED FINISH DATE: August 2020
+ANTICIPATED FINISH DATE: February 2020
 
 
 ### *Boilerplate Below*
