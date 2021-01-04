@@ -1,17 +1,25 @@
-import React from "react";
+import React from 'react';
 //import logo from '../../../public/logo.png';
-import "./App.css";
-import { NavBar } from "../NavBar/NavBar";
-import "../NavBar/NavBar.css"
-import { Preloader } from "../Preloader/Preloader";
-//Commenting this line out until it's used
-//import { Player } from '../Player/Player';
+import './App.css';
+import { NavBar } from '../NavBar/NavBar';
+import { Home } from '../Home/Home';
+import { About } from '../About/About';
+import { Footer } from '../Footer/Footer';
+import { Tour } from '../Tour/Tour';
+import { Tool } from '../Tool/Tool';
+import { Route } from 'react-router-dom';
 
-export const App = () => {
+console.log(process.env.REACT_APP_BAND_API_KEY);
+
+export const App = (props) => {
   return (
     <>
-      <Preloader />
       <NavBar />
+      <Route exact path="/" component={Home} />
+      <Route exact path="/" component={About} />
+      <Route path="/tourdates" component={Tour} />
+      <Route path="/tool" component={Tool} />
+      <Footer />
     </>
   );
-}
+};

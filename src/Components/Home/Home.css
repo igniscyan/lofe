@@ -1,0 +1,17 @@
+.base-grid-container {
+  display: grid;
+  grid-template-columns: 2fr 3fr 2fr;
+  grid-template-rows: auto;
+  gap: 1px 1px;
+  grid-template-areas: '. Main .';
+  z-index: 5;
+}
+
+.center-col-flex {
+  grid-area: Main;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column nowrap;
+  background-color: rgba(0, 0, 0, 0.05);
+}

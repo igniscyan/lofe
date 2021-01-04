@@ -1,0 +1,30 @@
+@import url('../../style.css');
+
+.ab-container {
+  display: flex;
+  flex-flow: column nowrap;
+  padding: 3vh 0 2vh 0;
+  position: relative;
+  z-index: 0;
+}
+
+.ab-header {
+  font-family: 'OPTIEdgarBold-Extended';
+  color: #000;
+  margin-bottom: 1vh;
+  font-size: 2vw;
+}
+
+.album-art {
+  width: 30vw;
+  height: 30vw;
+  z-index: 5;
+}
+
+.art-container {
+  background-color: #000;
+  position: relative;
+  max-width: 30vw;
+  max-height: 30vw;
+  overflow: hidden;
+}
