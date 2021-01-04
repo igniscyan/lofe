@@ -4,8 +4,8 @@
 }
 
 .tracklist-container {
-  width: 30vw;
-  height: 30vw;
+  width: 35vw;
+  height: 35vw;
   overflow-x: hidden;
   overflow-y: auto;
   position: absolute;
