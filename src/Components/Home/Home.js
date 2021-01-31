@@ -19,10 +19,10 @@ export const Home = (props) => {
       {/* empty div for '.' grid-areas in PageContent.css */}
       <div></div>
       {/* center-col-flex: the flex container for the main content, located within the middle base-grid column */}
-      <div className="center-col-flex">
+      <div className="scroll-container">
         {/* for each item in the JSON, we're gonna render a new AlbumBlock component */}
         {albumList.map((item) => {
-          return <ATPair key={item.name} query={item} pauseAll={pauseAll} />;
+          return <section className = "child"><ATPair key={item.name} query={item} pauseAll={pauseAll} /></section>;
         })}
       </div>
       <div></div>

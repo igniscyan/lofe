@@ -15,3 +15,14 @@
   flex-flow: row wrap;
   background-color: rgba(0, 0, 0, 0.05);
 }
+
+.scroll-container { 
+  scroll-snap-type: y mandatory;
+  height: 300px;
+  overflow-y: scroll;
+  scroll-snap-points-y: repeat(600px);
+}
+
+.child {
+  scroll-snap-align: start; 
+}

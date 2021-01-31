@@ -24,6 +24,7 @@ export const MobileNav = (props) => {
             </a>
             <a className="Store hideMe">Store</a>
             <a className="TourDates hideMe">Tour Dates</a>
+            <a className="Tool hideMe"> Tool </a>
             <a className="hamburger" onClick={expand}><FontAwesomeIcon icon={faBars} /> </a>
         </div>
     )
