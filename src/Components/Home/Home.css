@@ -18,7 +18,7 @@
 
 .scroll-container { 
   scroll-snap-type: y mandatory;
-  height: 300px;
+  height: 43vw;
   overflow-y: scroll;
   scroll-snap-points-y: repeat(600px);
 }
