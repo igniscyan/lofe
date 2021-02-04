@@ -11,8 +11,9 @@ export const About = (props) => {
 
   const cornerSpring = useSpring({
     borderRadius: (isHovering || isOpen) ? '9999px 0px 0px 9999px' : '9999px 9999px 9999px 9999px',
-    paddingRight: isOpen ? '80vmin' : isHovering ? '20vmin' : '0px',
-    transform: isHovering ? 'scale(1.1)' : 'scale(1.0)',
+    paddingRight: isOpen ? '80vw' : isHovering ? '600vw' : '0px',
+    left: isOpen ? '10vw' : '86vw',
+    transform: isHovering && !isOpen ? 'scale(1.1)' : 'scale(1.0)',
   });
 
   const widthSpring = useSpring({
