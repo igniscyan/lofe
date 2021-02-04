@@ -17,15 +17,11 @@ export const Home = (props) => {
     // base-grid-container: sets up the margins and main content sizing
     <div className="base-grid-container">
       {/* empty div for '.' grid-areas in PageContent.css */}
-      <div></div>
       {/* center-col-flex: the flex container for the main content, located within the middle base-grid column */}
-      <div className="scroll-container">
         {/* for each item in the JSON, we're gonna render a new AlbumBlock component */}
         {albumList.map((item) => {
           return <section className = "child"><ATPair key={item.name} query={item} pauseAll={pauseAll} /></section>;
         })}
-      </div>
-      <div></div>
     </div>
   );
 };

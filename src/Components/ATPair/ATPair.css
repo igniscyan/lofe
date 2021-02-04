@@ -4,5 +4,8 @@
   align-items: center;
   justify-content: center;
   position: relative;
-  height: 43vw;
+  height: 70vmin;
+  width: 70vmin;
+  margin: auto;
+  padding: 18vmin 0px 10vmin 0px;
 }

@@ -10,8 +10,8 @@ video {
 .audio-container {
   display: flex;
   flex-flow: row nowrap;
-  max-width: 30vw;
-  max-height: 30vw;
+  max-width: 55vmin;
+  max-height: 55vmin;
   align-items: center;
   justify-content: flex-start;
   border-bottom: 1px solid white;

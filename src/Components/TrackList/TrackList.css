@@ -4,11 +4,21 @@
 }
 
 .tracklist-container {
-  width: 35vw;
-  height: 35vw;
+  width: 57vmin;
+  height: 57vmin;
   overflow-x: hidden;
   overflow-y: auto;
   position: absolute;
   z-index: 7;
-  top: 6vw;
+  top: 27.5vmin;
+  left: 5.5vmin;
+}
+
+.tracklist-container::-webkit-scrollbar {
+  background-color: rgb(50, 50, 50, 1);
+  border-radius: 99999px;
+}
+.tracklist-container::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 99999px;
 }

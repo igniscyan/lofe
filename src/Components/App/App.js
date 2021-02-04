@@ -14,7 +14,7 @@ console.log(process.env.REACT_APP_BAND_API_KEY);
 
 export const App = (props) => {
   return (
-    <>
+    <div className="scroll-container">
       <MobileNav />
       <NavBar />
       <Route exact path="/" component={Home} />
@@ -22,6 +22,6 @@ export const App = (props) => {
       <Route path="/tourdates" component={Tour} />
       <Route path="/tool" component={Tool} />
       <Footer />
-    </>
+    </div>
   );
 };

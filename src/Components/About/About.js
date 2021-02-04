@@ -1,20 +1,32 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './About.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook, faSpotify } from '@fortawesome/free-brands-svg-icons';
+import {faTimes} from '@fortawesome/free-solid-svg-icons';
+import {useSpring, animated} from 'react-spring';
 
 export const About = (props) => {
+  const [isHovering, setHover] = useState(false);
+  const [isOpen, setOpen] = useState(false);
+
+  const cornerSpring = useSpring({
+    borderRadius: (isHovering || isOpen) ? '9999px 0px 0px 9999px' : '9999px 9999px 9999px 9999px',
+    paddingRight: isOpen ? '80vmin' : isHovering ? '20vmin' : '0px',
+    transform: isHovering ? 'scale(1.1)' : 'scale(1.0)',
+  });
+
+  const widthSpring = useSpring({
+    display: isOpen ? 'inherit' : 'none',
+  });
+
   return (
-    <div className="about-container">
-      <div className="about-image-flex">
-        <div className="crop">
-          <img src={require("./lo.png")} alt="curtis and ryan" />
-        </div>
-      </div>
-      <div className="about-text">
+    <animated.div className="about-container" style={{... cornerSpring}} onMouseOver={() => setHover(true)} onMouseOut={() => setHover(false)}>
+
+      <animated.div className="about-text" style={{... widthSpring}}>
         <span>
           <h2>ABOUT</h2>
           <div></div>
+          <FontAwesomeIcon icon={faTimes} className="about-x" onClick={() => setOpen(false)}/>
         </span>
         <p>
           {/* &nbsp;&nbsp;&nbsp;&nbsp; */} Locals Only Sound is a music
@@ -51,7 +63,13 @@ export const About = (props) => {
             Spotify
           </a>
         </div>
+      </animated.div>
+
+            <div className="about-image-flex" onClick={() => setOpen(!isOpen)}>
+        <div className="crop">
+          <img src={require("./lo.png")} alt="curtis and ryan" />
+        </div>
       </div>
-    </div>
+    </animated.div>
   );
 };

@@ -17,15 +17,15 @@
 }
 
 .album-art {
-  width: 35vw;
-  height: 35vw;
+  width: 57vmin;
+  height: 57vmin;
   /* z-index: 5; */
 }
 
 .art-container {
   background-color: #000;
   position: relative;
-  max-width: 35vw;
-  max-height: 35vw;
+  width: 57vmin;
+  height: 57vmin;
   overflow: hidden;
 }

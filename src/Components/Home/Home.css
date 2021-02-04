@@ -16,13 +16,12 @@
   background-color: rgba(0, 0, 0, 0.05);
 }
 
-.scroll-container { 
+.scroll-container {
   scroll-snap-type: y mandatory;
-  height: 43vw;
+  height: 100vh;
   overflow-y: scroll;
-  scroll-snap-points-y: repeat(600px);
 }
 
 .child {
-  scroll-snap-align: start; 
+  scroll-snap-align: start;
 }
