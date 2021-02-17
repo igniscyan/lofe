@@ -1,11 +1,11 @@
 @import url('../../style.css');
+ 
 
 .tour-container {
-  padding-top: 15vh;
+  padding-top: 10vh;
   display: flex;
   flex-flow: column nowrap;
-  justify-content: flex-start;
-  align-items: center;
+  justify-content: space-evenly;
 }
 
 .tour-container h1 {
@@ -18,9 +18,12 @@
   grid-template-columns: repeat(2, 1fr) 10vw;
   grid-template-rows: auto;
   grid-template-areas: 'location time buttons';
+  align-items: shrink;
+  flex-shrink: 3;
+  
 }
 
-.row{
+.row {
   display: contents;
 }
 
@@ -36,6 +39,22 @@
   grid-area: 'time';
   border-bottom: .5px solid black;
   padding: 10px;
+  padding-top: 50px;
+}
+.venue-name {
+  font-size: 1.15em;
+}
+
+.parallax {
+  background: url('./lo.jpg') 50% 50% no-repeat;
+  height: 40vh;
+  width: 100vw;
+  
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat; 
+  background-size: cover;  
+
 }
 
 .buttons {
@@ -44,8 +63,24 @@
   flex-flow: row nowrap;
   justify-content: flex-start;
   align-items: center;
+  border-bottom: .5px solid black;
+  color: red;
 }
 .row:hover div {
   background-color: #dbeaf4;
   cursor: pointer; 
+}
+
+.buttons a, .buttons a:link, .buttons a:visited {
+  color: white;
+  display: inline-block; padding: 2px 8px;
+  text-decoration: none;
+  background-color: black;
+  border-style: solid; 
+  border-width: 2px;
+  border-color: black;
+  border-radius: 25px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 20px;
+
 }
