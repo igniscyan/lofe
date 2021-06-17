@@ -125,7 +125,7 @@ export const NavBar = (props) => {
                 onMouseOver={() => setToolHovering(true)}
                 onMouseOut={() => setToolHovering(false)}
                 style={{ ...toolSpring }}>
-                <Link to="/tool">TOOL</Link>
+                <Link to="/aboutFull">ABOUT</Link>
               </animated.li>
             </div>
           </ul>
