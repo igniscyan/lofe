@@ -15,7 +15,7 @@ export const Tour = (props) => {
   return (
     <header>
       <div className='parallax'>
-        
+        <center><h1>TOUR</h1></center>
       </div>
       <div className="tour-container">
         <div className="event-grid">

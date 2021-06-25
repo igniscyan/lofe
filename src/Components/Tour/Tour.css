@@ -6,6 +6,7 @@
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-evenly;
+  align-items: center;
 }
 
 .tour-container h1 {
@@ -43,18 +44,26 @@
 }
 .venue-name {
   font-size: 1.15em;
+  font-family: 'Courier New';
 }
 
 .parallax {
-  background: url('./lo.jpg') 50% 50% no-repeat;
-  height: 40vh;
+  background: linear-gradient(to bottom, #00000070, #00000070), url('./lo.jpg');
+  height: 50vh;
   width: 100vw;
-  
+  overflow: hidden;
+  background-position: bottom;
   background-attachment: fixed;
-  background-position: center;
+  background-position: 0 -300px;
   background-repeat: no-repeat; 
   background-size: cover;  
 
+}
+.parallax h1{
+  font-family: OPTIEdgarBold-Extended;
+  font-size: 3em;
+  padding-top: 25vh;
+  color: white;
 }
 
 .buttons {
@@ -81,6 +90,6 @@
   border-color: black;
   border-radius: 25px;
   font-family: 'Courier New', Courier, monospace;
-  font-size: 20px;
+  font-size: 100%;
 
 }
